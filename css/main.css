@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #2b2b2b;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+}
+
+main {
+    grid-row: 2 / 3;
+}
+
+/* Header */
+
+.main-header {
+    grid-row: 1 / 2;
+    background: url('../img/hero.png');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 2.5rem;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.main-header__brand,
+.main-nav {
+    display: none;
+}
+
+.main-header h2 {
+    grid-column: 1 / -1;
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    line-height: 5rem;
+    color: #9b9b9b;
+}
+
+.main-header h2 span {
+    color: black;
+}
+
+/* Hamburger menu */
+
+.toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+  }
+  
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+  .toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+  }
+
+/* Section About */
+
+.about {
+    padding: 3rem 2.5rem;
+}
+
+.about-title {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+}
+
+.about__details p {
+    font-size: 1.3rem;
+    color: #7f7f7f;
+    line-height: 2.5rem;
+}
+
+/* Section Skills */
+
+.skills {
+    background: #f9ceb7;
+    text-align: center;
+    padding: 7.2rem 2.5rem;
+}
+
+.skills img {
+    padding-bottom: 1.9rem;
+}
+
+.skills h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0 auto;
+}
+
+.skills p {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+}
+
+/* Footer */
+
+.main-footer {
+    background: #ebebeb;
+    padding: 3rem 2.5rem;
+}
+
+.main-footer__image-container {
+    width: 100%;
+    max-width: 420px;
+    border: 12px solid #ffffff;
+}
+
+.main-footer__image {
+    width: 100%;
+    vertical-align: top; /* to avoid free space at the bottom of an image */
+}
+
+.main-footer__contacts {
+    padding: 1rem;
+}
+
+.main-footer__title {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+}
+
+.main-footer__call {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.7rem;
+    margin: -1.9rem 0 0.3rem 0;
+}
+
+.main-footer__link {
+    text-decoration: none;
+    color:#c49075;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.main-footer__link img {
+    padding-right: 0.6rem;
+    vertical-align: middle;
+}
+
+.main-footer__subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.7rem;
+    margin-top: 2.5rem;
+}
+
+.main-footer__mediaicons {
+    display: grid;
+    grid-gap: 1.3rem;
+    grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+    list-style: none;
+    padding: 0;
+}
+
+.main-footer__mediaicon img {
+    vertical-align: bottom;
+}
+
+
+/* Tablets */
+@media (min-width: 40rem) {}
+
+
+/* Laptops and desktops */
+
+@media (min-width: 64rem) {
+    main {
+        display: grid;
+    }
+
+    /* Header */
+
+    .main-menu {
+        justify-content: space-between;
+        padding: 0 5.6rem;
+    }
+
+    .main-header__brand,
+    .main-nav {
+        display: block;
+    }
+
+    .main-menu button {
+        display: none;
+    }
+
+    .main-header__brand h1 {
+        font-family: 'Lora', serif;
+        font-size: 1.9rem;
+    }
+    
+    .main-header__brand a {
+        text-decoration: none;
+        color: #bbc085;
+    }
+    
+    .main-nav ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+    
+    .main-nav__item {
+        margin: 0 2rem;
+    }
+    
+    .main-nav a {
+        font-size: 1.1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #828282;
+    }
+
+    .main-header h2 {
+        font-size: 4.5rem;
+        padding: 0 5.6rem;
+    }
+
+    /* Section About */
+
+    .about {
+        grid-row: 1 / 2;
+        padding: 5rem 0;
+    }
+
+    .about-title {
+        padding-left: 5.6rem;
+    }
+
+    .about__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about__details p {
+        padding: 0 5.6rem;
+    }
+
+    /* Section Skills */
+
+    .skills {
+        grid-row: 2 / 3;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .skills h3 {
+        width: 190px;
+    }
+
+    .skills p {
+        padding: 0 5.6rem;
+    }
+
+    /* Footer */
+
+    .main-footer {
+        grid-row: 3 / 4;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; 
+        justify-content: space-around;
+        padding: 6.9rem 0;
+    }
+
+    .main-footer__link {
+        font-size: 1.7rem;
+    }
+
+    .main-footer__mediaicons {
+        grid-gap: 1.9rem;
+    }
+}
+
+
